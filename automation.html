@@ -1,0 +1,515 @@
+<!--
+Google IO 2012/2013 HTML5 Slide Template
+
+Authors: Eric Bidelman <ebidel@gmail.com>
+         Luke Mahé <lukem@google.com>
+
+URL: https://code.google.com/p/io-2012-slides
+-->
+<!DOCTYPE html>
+<html>
+<head>
+  <title></title>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="chrome=1">
+  <!--<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">-->
+  <!--<meta name="viewport" content="width=device-width, initial-scale=1.0">-->
+  <!--This one seems to work all the time, but really small on ipad-->
+  <!--<meta name="viewport" content="initial-scale=0.4">-->
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <link rel="stylesheet" media="all" href="theme/css/default.css">
+  <link rel="stylesheet" media="only screen and (max-device-width: 480px)" href="theme/css/phone.css">
+  <base target="_blank"> <!-- This amazingness opens all links in a new tab. -->
+  <script data-main="js/slides" src="js/require-1.0.8.min.js"></script>
+</head>
+<body style="opacity: 0">
+
+<slides class="layout-widescreen">
+
+  <slide class="logoslide nobackground">
+    <article class="flexbox vcenter">
+      <span><img src="images/prodigious-logo.png"></span>
+    </article>
+  </slide>
+
+  <slide class="title-slide segue nobackground">
+    <aside class="gdbar"><img src="images/prodigious-logo.png"></aside>
+    <!-- The content of this hgroup is replaced programmatically through the slide_config.json. -->
+    <hgroup class="auto-fadein">
+      <h1 data-config-title><!-- populated from slide_config.json --></h1>
+      <h2 data-config-subtitle><!-- populated from slide_config.json --></h2>
+      <p data-config-presenter><!-- populated from slide_config.json --></p>
+    </hgroup>
+  </slide>
+  
+  <slide class="fill nobackground" style="background-image: url(images/monkey.gif)">
+    <hgroup>
+      <h2 class="white">Why automate processes?</h2>
+    </hgroup>
+  </slide>
+
+  <slide>
+    <hgroup>
+      <h2>What tools can we use?</h2>
+    </hgroup>
+    <article>
+      <ul class="build">
+        <li>Make</li>
+        <li>Rake</li>
+        <li>Ant/Maven</li>
+        <li>Gradle</li>
+        <li>Sbt</li>
+        <li>Jake</li>
+        <li>Brunch</li>
+        <li>Grunt</li>
+        <li>Gulp</li>
+      </ul>
+    </article>
+  </slide>
+
+  <slide>
+    <hgroup>
+      <h2>What can we automate?</h2>
+    </hgroup>
+    <article>
+      <ul class="build">
+        <li>Minification</li>
+        <li>Compilation</li>
+        <li>Unit Testing</li>
+        <li>Linting</li>
+        <li>Sass or LESS</li>
+        <li>Preprocessing</li>
+        <li>Live-reloading</li>
+        <li>Image resizing</li>
+        <li>Custom tasks</li>
+      </ul>
+    </article>
+  </slide>
+  
+  <slide class="fill nobackground" style="background-image: url(images/fight.gif)">
+    <article class="flexbox vcenter">
+      <h2 class="white">Grunt vs Gulp</h2>
+    </article>
+  </slide>
+  
+  <slide class="fill nobackground">
+    <article class="flexbox vcenter">
+      <span><img src="images/nodejs-dark.png"></span>
+    </article>
+  </slide>
+  
+  <slide>
+    <hgroup>
+      <h2>Node.js</h2>
+    </hgroup>
+    <article>
+      <ul class="build">
+        <li>Runtime and a library</li>
+        <li>Non-blocking I/O</li>
+        <li>Async Events</li>
+        <li>I/O Tasks</li>
+        <li>Google V8</li>
+        <li>Joyent</li>
+      </ul>
+    </article>
+  </slide>
+
+  <slide>
+    <hgroup>
+      <h2>Node.js</h2>
+      <h3>NVM</h3>
+    </hgroup>
+    <article>
+     <ul class="build">
+       <li>
+        <pre class="prettyprint" data-lang="bash">
+<b>curl</b> https://raw.githubusercontent.com/creationix/nvm/v0.10.0/install.sh | bash
+</pre>
+       </li>
+       <li>
+        <pre class="prettyprint" data-lang="bash">
+<b>wget</b> -qO- https://raw.githubusercontent.com/creationix/nvm/v0.10.0/install.sh | bash       
+</pre>
+       </li>
+       <li>
+        <pre class="prettyprint" data-lang="bash">nvm install 0.10
+</pre>
+       </li>
+       <li>
+        <pre class="prettyprint" data-lang="bash">nvm use 0.10
+</pre>
+       </li>
+     </ul>
+    </article>
+  </slide>
+  
+  <slide>
+    <hgroup>
+      <h2>Grunt</h2>
+    </hgroup>
+    <article class="flexbox vcenter">
+      <img src="images/grunt-logo.png" alt="Description" title="Description">
+    </article>
+  </slide>
+  
+  <slide>
+    <hgroup>
+      <h2>Grunt</h2>
+    </hgroup>
+    <article>
+      <ul class="build">
+        <li>Javascript Task Runner</li>
+        <li>Runs on command line</li>
+        <li>Runs on Node.js</li>
+        <li>Rich Plugin System with npm</li>
+      </ul>
+    </article>
+  </slide>
+
+  <slide>
+    <hgroup>
+      <h2>Grunt</h2>
+    </hgroup>
+    <article>
+      <ul class="build">
+        <li>
+          <pre class="prettyprint" data-lang="bash">
+npm install -g grunt cli
+</pre>
+        </li>
+        <li>
+          <pre class="prettyprint" data-lang="bash">
+npm init
+</pre>
+        </li>
+        <li>
+          <pre class="prettyprint" data-lang="bash">
+npm install grunt --save-dev
+</pre>
+        </li>
+      </ul>
+    </article>
+  </slide>
+  
+  <slide>
+    <hgroup>
+      <h2>Grunt</h2>
+      <h3>Gruntfile.js</h3>
+    </hgroup>
+    <article class="smallest">
+      
+      <pre class="prettyprint" data-lang="javascript">
+module.exports = function(grunt) {
+  // Project configuration.
+  grunt.initConfig({
+    pkg: grunt.file.readJSON('package.json'),
+    <b>uglify: {
+      options: {
+        banner: '/*! <%= pkg.name %> <%= grunt.template.today("yyyy-mm-dd") %> */\n'
+      },
+      build: {
+        src: ['src/**/*.js'],
+        dest: 'build/<%= pkg.name %>.min.js'
+      }
+    },</b>
+    <b>watch: {
+      files: ['src/**/*.js'],
+      tasks: ['uglify']
+    }</b>
+  });
+  // Load the plugin that provides the "uglify" task.
+  grunt.loadNpmTasks('grunt-contrib-uglify');
+  grunt.loadNpmTasks('grunt-contrib-watch');
+  // Default task(s).
+  grunt.registerTask('default', ['uglify', 'watch']);
+};       
+</pre>
+    </article>
+  </slide>
+  
+  <slide class="fill nobackground" style="background-image: url(images/bubbles.gif)">
+    <article class="flexbox vcenter">
+      <h2 class="white">Grunt Plugins</h2>
+      <a href="http://gruntjs.com/plugins">></a>
+    </article>
+  </slide>
+  
+  <slide>
+    <hgroup>
+      <h2>Gulp</h2>
+    </hgroup>
+    <article class="flexbox vcenter">
+      <img src="images/gulp-2x.png" alt="Description" title="Description">
+    </article>
+  </slide>
+  
+  <slide>
+    <hgroup>
+      <h2>Gulp</h2>
+    </hgroup>
+    <article>
+      <ul class="build">
+        <li>Stream-based build system</li>
+        <li>Code over configuration</li>
+        <li>Small, idiomatic Node modules</li>
+        <li>Really simple, elegant API</li>
+      </ul>
+    </article>
+  </slide>
+  
+  <slide>
+    <hgroup>
+      <h2>Gulp</h2>
+      <h3>Streams</h3>
+    </hgroup>
+    <article>
+      <p>The main tool in node's evented toolbox is the Stream. Stream instances are basically Unix pipes. They can be readable, writable or both and are easy to reason about -- you can pipe a readable stream to a writable stream by doing readableStream.pipe(writableStream).</p>
+    </article>
+  </slide>
+  
+  <slide>
+    <hgroup>
+      <h2>Gulp</h2>
+      <h3>Basics</h3>
+    </hgroup>
+    <article>
+       <ul class="build">
+         <li>
+           <pre class="prettyprint" data-lang="bash">
+npm install -g gulp
+</pre>
+         </li>
+         <li>
+          <pre class="prettyprint" data-lang="bash">
+npm init
+</pre>
+         </li>         
+         <li>
+          <pre class="prettyprint" data-lang="bash">
+npm install --save-dev gulp
+</pre>
+         </li>
+         <li>
+          <pre class="prettyprint" data-lang="javascript">
+var gulp = require('gulp');
+
+gulp.task('default', function() {
+  // place code for your default task here
+});        
+</pre>
+         </li>
+       </ul>
+    </article>
+  </slide>
+  
+  <slide>
+    <hgroup>
+      <h2>Gulp</h2>
+      <h3>Example</h3>
+    </hgroup>
+    <article class="smaller">
+      <pre class="prettyprint" data-lang="javascript">
+var gulp = require('gulp'); 
+var concat = require('gulp-concat');
+var uglify = require('gulp-uglify');
+var rename = require('gulp-rename');
+
+// Concatenate & Minify JS
+gulp.task('scripts', function() {
+    return gulp.src('js/*.js')
+        .pipe(concat('all.js'))
+        .pipe(gulp.dest('dist'))
+        .pipe(rename('all.min.js'))
+        .pipe(uglify())
+        .pipe(gulp.dest('dist'));
+});
+
+// Watch Files For Changes
+gulp.task('watch', function() {
+    gulp.watch('js/*.js', ['lint', 'scripts']);
+});
+
+gulp.task('default', ['scripts', 'watch']);       
+</pre>
+    </article>
+  </slide>  
+  
+  <slide>
+    <hgroup>
+      <h2>Yeoman</h2>
+    </hgroup>
+    <article class="flexbox vcenter">
+      <img src="images/yeoman-logo.png" alt="yeoman" title="yeoman">
+    </article>
+  </slide>
+  
+  <slide>
+    <hgroup>
+      <h2>Yeoman</h2>
+    </hgroup>
+    <article>
+      <ul class="build">
+        <li>Scaffolding Tool</li>
+        <li>Workflow</li>
+        <li>Toolset</li>
+      </ul>
+    </article>
+  </slide>
+  
+  <slide>
+    <hgroup>
+      <h2>Yeoman</h2>
+      <h3>Basics</h3>
+    </hgroup>
+    <article>
+       <ul class="build">
+         <li>
+           <pre class="prettyprint" data-lang="bash">
+npm install -g yo
+</pre>
+         </li>
+         <li>
+          <pre class="prettyprint" data-lang="bash">
+npm install -g generator-webapp
+</pre>
+         </li>         
+         <li>
+          <pre class="prettyprint" data-lang="bash">
+npm install -g generator-angular
+</pre>
+         </li>         
+       </ul>
+    </article>
+  </slide>
+  
+  <slide class="fill nobackground" style="background-image: url(images/bubbles.gif)">
+    <article class="flexbox vcenter">
+      <h2 class="white">Yeoman Generators</h2>
+      <a href="http://yeoman.io/generators/official.html">></a>
+    </article>
+  </slide>
+  
+  <slide>
+    <hgroup>
+      <h2>Bower</h2>
+    </hgroup>
+    <article class="flexbox vcenter">
+      <img src="images/bower-logo.png" alt="bower" title="bower">
+    </article>
+  </slide>
+  
+  <slide>
+    <hgroup>
+      <h2>Bower</h2>
+    </hgroup>
+    <article>
+      <ul class="build">
+        <li>NPM for web</li>
+        <li>Package Manager</li>
+      </ul>
+    </article>
+  </slide>
+  
+  <slide>
+    <hgroup>
+      <h2>Bower</h2>
+      <h3>Basics</h3>
+    </hgroup>
+    <article>
+       <ul class="build">
+         <li>
+           <pre class="prettyprint" data-lang="bash">
+npm install -g bower
+</pre>
+         </li>
+         <li>
+          <pre class="prettyprint" data-lang="bash">
+bower install &lt;package&gt;
+</pre>
+         </li>         
+         <li>
+          <pre class="prettyprint" data-lang="bash">
+bower install jquery
+</pre>
+         </li>         
+       </ul>
+    </article>
+  </slide>
+  
+  <slide class="fill nobackground" style="background-image: url(images/bubbles.gif)">
+    <article class="flexbox vcenter">
+      <h2 class="white">Bower Packages</h2>
+      <a href="http://bower.io/search/">></a>
+    </article>
+  </slide>
+  
+  <slide>
+    <hgroup>
+      <h2>Yeoman + Grunt + Bower</h2>
+    </hgroup>
+    <article class="flexbox vcenter">
+      <img src="images/triple-threat.png" alt="trinity" title="trinity">
+    </article>
+  </slide>
+  
+  <slide>
+    <hgroup>
+      <h2>Vagrant</h2>
+    </hgroup>
+    <article class="flexbox vcenter">
+      <img src="images/vagrant-logo.png" alt="vagrant" title="vagrant">
+    </article>
+  </slide>
+  
+  <slide>
+    <hgroup>
+      <h2>Vagrant</h2>
+    </hgroup>
+    <article>
+      <ul class="build">
+        <li>"lightweight, reproducible, and portable development environments."</li>
+        <li>Automation for VMs</li>
+        <li>Same environment for all the team</li>
+        <li>Disposable environment</li>
+        <li>Environment Setup in minutes not hours</li>
+        <li>Machines are provisioned on top of VirtualBox, VMware, AWS, or any other provider</li>
+        <li>Industry-standard provisioning tools such as shell scripts, Chef, or Puppet, can be used to automatically install and configure software on the machine.</li>
+      </ul>
+    </article>
+  </slide>
+
+  <slide class="nobackground">
+    <aside class="gdbar right"><img src="images/prodigious-logo.png"></aside>
+    <article class="flexbox vleft auto-fadein">
+      <h2>Thank You</h2>
+    </article>
+  </slide>
+
+  <slide class="logoslide nobackground">
+    <article class="flexbox vcenter">
+      <span><img src="images/prodigious-logo.png"></span>
+    </article>
+  </slide>
+
+  <slide class="backdrop"></slide>
+
+</slides>
+
+<script>
+var _gaq = _gaq || [];
+_gaq.push(['_setAccount', 'UA-XXXXXXXX-1']);
+_gaq.push(['_trackPageview']);
+
+(function() {
+  var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+  ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+  var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+})();
+</script>
+
+<!--[if IE]>
+  <script src="http://ajax.googleapis.com/ajax/libs/chrome-frame/1/CFInstall.min.js"></script>
+  <script>CFInstall.check({mode: 'overlay'});</script>
+<![endif]-->
+</body>
+</html>
