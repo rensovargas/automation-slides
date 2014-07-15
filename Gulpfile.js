@@ -68,5 +68,6 @@ gulp.task('default', ['compass'], function () {
  
   startExpress();
   startLivereload();
+  gulp.watch(['*.js', '*.html'], notifyLivereload);
   gulp.watch('./theme/scss/*.scss', ['compass']);
 });
